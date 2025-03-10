@@ -48,35 +48,10 @@ document.addEventListener("DOMContentLoaded", function() {
         server_manage_icon: ["server_manage", "server_manage_top"]
     };
 
-<<<<<<< HEAD
-    // 2. 綁定點擊事件，切換顯示的內容
-=======
->>>>>>> e15811181bb9d9c32d6db8b2496bc3cb0256205e
     Object.keys(pages).forEach(iconId => {
         const icon = document.getElementById(iconId);
         if (icon) {
             icon.addEventListener("click", () => {
-<<<<<<< HEAD
-                console.log(`點擊了 ${iconId}`);
-
-                // 隱藏所有內容
-                document.querySelectorAll('.top_content, .dashboard_content, .server_manage, #robot_manager, #using_situation, #usage_estimate').forEach(el => {
-                    el.style.display = "none";
-                });
-
-                // 顯示被點擊對應的內容
-                pages[iconId].forEach(pageId => {
-                    const page = document.getElementById(pageId);
-                    if (page) {
-                        console.log(`顯示 ${pageId}`);
-                        page.style.display = "block";
-
-                        // 確保內部 h1 也會顯示
-                        const h1 = page.querySelector("h1");
-                        if (h1) {
-                            h1.style.display = "block";
-                        }
-=======
                 document.querySelectorAll('.top_content, .dashboard_content, .server_manage').forEach(el => {
                     el.style.display = "none";
                 });
@@ -85,13 +60,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     const page = document.getElementById(pageId);
                     if (page) {
                         page.style.display = "block";
->>>>>>> e15811181bb9d9c32d6db8b2496bc3cb0256205e
                     }
                 });
             });
         }
     });
-<<<<<<< HEAD
 
     // 3. 處理 "系統管理" 按鈕 (點擊後隱藏主要側邊欄，顯示齒輪按鈕)
     const server_manage_icon = document.getElementById('server_manage_icon');
@@ -138,6 +111,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
 });
-=======
-})
->>>>>>> e15811181bb9d9c32d6db8b2496bc3cb0256205e
