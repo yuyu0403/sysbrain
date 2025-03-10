@@ -25,16 +25,16 @@ document.addEventListener("DOMContentLoaded",function(){
     const groupbtn = document.getElementById('groupbtn');
     groupbtn.addEventListener("click",groupbtnfcn);
     function groupbtnfcn(){
-        if(text.style.display ==='block' || title.style.display ==='flex'){
+        if(group.style.display ==='block'){
+            text.style.display ='block';
+            title.style.display ='flex';
+            group.style.display ='none';
+        }
+        else{
             text.style.display ='none';
             title.style.display ='none';
             group.style.display ='flex';
             group.style.width ='100vw';
-        }
-        else{
-            text.style.display ='block';
-            title.style.display ='flex';
-            group.style.display ='none';
         }
     };
 });
