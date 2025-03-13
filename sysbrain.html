@@ -24,9 +24,15 @@
             <hr class="line1"></hr>
 
             <ul class="list" id="list">
-                <li>通用型機器人模式</li>
-                <li>小幫手模式</li>
-                <li>限定知識機器人</li>
+                <li id="General Robot Mode" type="button">通用型機器人模式</li>
+                <li type="button" id="ass_robot">小幫手模式</li>
+                <li type="button" id="limit_robot">限定知識機器人</li>
+            </ul>
+
+            <ul class="ass_list" id="ass_list">
+                <li type="button" id="ass_overview_btn"><i class="fa-regular fa-message"></i>摘要小幫手</li>
+                <li type="button"><i class="fa-regular fa-message" ></i>翻譯小幫手</li>
+                <li type="button"><i class="fa-regular fa-message" ></i>錯誤訊息小幫手</li>
             </ul>
 
             <div class="row_all" id="row_all">
@@ -61,25 +67,6 @@
                 <i class="fa-solid fa-right-from-bracket"></i>
             </div>
         </div>
-
-        <!-- 切換群組 -->
-        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">群組切換</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                ...
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-            </div>
-        </div> -->
     </div>
 
     <div class="text" id="text">
@@ -191,6 +178,10 @@
         </div>
     </div>
 
+    <div class="ass_list_overview" id="ass_list_overview">
+        <p>小幫手會協助您進行重點摘要，您可調整以下設定，並按生成，即會顯示結果。</p>
+    </div>
+
     <div class="group" id="group">
         <div class="d-flex flex-column flex-shrink-0 bg-gray sidebar_set" style="width: 4.5rem;" id="sidebar_set">
             <ul class="side_first_ul" id="side_first_ul">
@@ -204,7 +195,7 @@
                 <li class="icon_gear" id="icon_gear" style="display: none;"><i class="fa-solid fa-user-gear fa-xl " style="color: #ffffff;"></i></li>
                 <li id="icon_lock"><i class="fa-solid fa-user-lock fa-xl" style="color: #ffffff;" id="server_manage_icon"></i></li>
                 <li id="icon_group"><i class="fa-solid fa-users-line fa-xl" style="color: #ffffff;"></i></li>
-                <li class="spe"><img src="https://gptx-demo.modz.ai/assets/img/chatuser.png" class="ul_pic_2"></li>
+                <li class="spe" id="spe"><img src="https://gptx-demo.modz.ai/assets/img/chatuser.png" class="ul_pic_2"></li>
                 <li><i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff;"></i></li>
             </ul>
         </div>
