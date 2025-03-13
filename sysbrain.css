@@ -162,29 +162,29 @@ hr.line2{
 .modal-backdrop.show{
     opacity: 0 !important;
 } */
- .text{
+.text{
     flex-grow: 1;
     margin-left: 20%;
- }
- .text_h2{
+}
+.text_h2{
     color: black;
     margin-top: 4%;
     margin-left: 40%;
     letter-spacing: 3px;
     font-family: sans-serif;
     font-weight: 700;
- }
- .text_h4{
+}
+.text_h4{
     color: black;
     margin-left: 40.5%;
     letter-spacing: 3px;
     font-size: 23px;
- }
- .all_text{
+}
+.all_text{
     display: flex;
     justify-content: space-around;
     margin-top: 2%;
- }
+}
 .sidebar{
     position: fixed;  
     right: 0;  
@@ -201,25 +201,25 @@ hr.line2{
     letter-spacing: 12px;
     padding-top: 2%;
 }
- .text1_title{
+.text1_title{
     display: flex;
     margin-top: 1.3%;
- }
- .icon1{
+}
+.icon1{
     margin-right: 20%;
     margin-top: 5%;
     font-size: 25px;
- }
- .content1 h6{
+}
+.content1 h6{
     font-weight: 700;
     letter-spacing: 2px;
     white-space: nowrap;
- }
- .content1 p{
+}
+.content1 p{
     letter-spacing: 1px;
     font-size: 14px;
     white-space: nowrap;
- }
+}
 .text2_title{
     display: flex;
     margin-left: 18%;
@@ -230,16 +230,16 @@ hr.line2{
     font-size: 25px;
 }
 
- .content2 h6{
+.content2 h6{
     font-weight: 700;
     letter-spacing: 2px;
     white-space: nowrap;
- }
- .content2 p{
+}
+.content2 p{
     letter-spacing: 1px;
     font-size: 14px;
     white-space: nowrap;
- }
+}
 .text3_title{
     display: flex;
 }
@@ -250,59 +250,59 @@ hr.line2{
     font-weight: 700;
     letter-spacing: 2px;
     white-space: nowrap;
- }
- .content3 p{
+}
+.content3 p{
     letter-spacing: 1px;
     font-size: 14px;
     white-space: nowrap;
- }
- .icon3{
+}
+.icon3{
     margin-right: 20%;
     margin-left: 20%;
     margin-top: 5%;
     font-size: 25px;
- }
- .block_text{
+}
+.block_text{
     font-size: 15px;
     line-height: 2.2;
     letter-spacing: 2px;
     width: 100%;
- }
- .block_text p{
+}
+.block_text p{
     margin-bottom: 0;
- }
- .block_text1{
+}
+.block_text1{
     background-color: #F4FAFC;
- }
- .block_text2{
+}
+.block_text2{
     background-color: #F4FAFC;
- }
- .block_text3{
+}
+.block_text3{
     background-color: #F4FAFC;
- }
- .block{
+}
+.block{
     background-color: white;
     flex: 1 1 auto;
- }
- .input_all{
+}
+.input_all{
     position: fixed;
     bottom: 0;
     left: 33%;
     width: 50%;
- }
- .input{
+}
+.input{
     display: flex;
     align-items: center;
     justify-content: center;
- }
- .number{
+}
+.number{
     display: flex;
     justify-content: center;
     margin:1% 5% 1% 50%;
     color: gray;
     float:right;
- }
- .input textarea{
+}
+.input textarea{
     background-color: #F4FAFC;
     border-color: #ECECF1;
     color: black;
@@ -310,22 +310,22 @@ hr.line2{
     width: 100%;
     margin-left: 1%;
     margin-right: 1%;
- }
- .input button{
+}
+.input button{
     border: none;
     background:none;
     font-size: 18px;
- }
- /* .title{
+}
+/* .title{
     display: none;
- }
- .text{
+}
+.text{
     display: none;
- } */
- .group{
+} */
+.group{
     display: none;
- }
- 
+}
+
 /* .group{
     display: flex;
     width: 100vw;
@@ -338,7 +338,8 @@ hr.line2{
     flex-direction: column;
     justify-content: space-between; /* 讓 .side_last_ul 推到底部 */
     align-items: center; /* 讓內容居中對齊 */
-    width: 80px; /* 保持與原本設計一致 */
+    width: 80px !important; /* 保持與原本設計一致 */
+    position: fixed;
 }
 
 .side_first_ul, .side_last_ul {
@@ -401,7 +402,7 @@ hr.line2{
 
 
 
-.top_content, .server_manage, .dashboard_content {
+.top_content, .server_manage{
     display: none; 
 }
 #dashboard, #dashboard_content {
@@ -415,19 +416,27 @@ i{
 
 .content{
     width: 100%;
+    display: flex;
+    margin-left: 80px;
+    flex-direction: column;
 }
 
+.content_contaier{
+    width: 100%;
+}
 .top_content{
     border-bottom: 1px solid black;
     width: 100%;
     padding: 10px;
     letter-spacing: 8px;
     font-weight: 700;
+    margin: 0;
 }
 
 .dashboard_content{
     text-align: end;
-    margin-right: 50px;
+    margin: 0 50px;
+
 }
 
 .ser_manage_h5{
@@ -444,49 +453,48 @@ i{
 }
 
 
-.highcharts-figure,
-.highcharts-data-table table {
-    min-width: 360px;
-    max-width: 800px;
-    margin: 1em auto;
+.select_date{
+    margin: 10px 0;
 }
 
-.highcharts-data-table table {
-    font-family: Verdana, sans-serif;
-    border-collapse: collapse;
-    border: 1px solid #ebebeb;
-    margin: 10px auto;
-    text-align: center;
+.select_date select{
+    padding: 5px;
+}
+
+
+.dash_chart{
+    height: 50vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: left;
+    padding: 25px 20px;
+    margin: 20px 0;
+}
+
+.robot_sidebar{
+    width: 150px;
+    border-right: 1px solid black;
+    padding: 16px 12px;
+    overflow-y: scroll;
+}
+
+.add_button{
+    background-color: rgb(24, 92, 193);
+    height: 32px;
+    border: none;
+    border-radius: 25px;
     width: 100%;
-    max-width: 500px;
 }
 
-.highcharts-data-table caption {
-    padding: 1em 0;
-    font-size: 1.2em;
-    color: #555;
+ul li{
+    list-style: none;
+    padding: 16px 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.highcharts-data-table th {
-    font-weight: 600;
-    padding: 0.5em;
-}
-
-.highcharts-data-table td,
-.highcharts-data-table th,
-.highcharts-data-table caption {
-    padding: 0.5em;
-}
-
-.highcharts-data-table thead tr,
-.highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
-}
-
-.highcharts-data-table tr:hover {
-    background: #f1f7ff;
-}
-
-.highcharts-description {
-    margin: 0.3rem 10px;
+ul{
+    padding: 0 !important;
 }

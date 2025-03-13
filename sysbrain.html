@@ -12,6 +12,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
 
@@ -209,19 +210,67 @@
             </ul>
         </div>
         <div class="content">
-            <h1 class="top_content" id="dashboard">Dashboard(Group-Demo)</h1>
-            <div>
-                <div><p class="dashboard_content" id="dashboard_content">近30日</p></div>
-                <div class="dshb_chart">
-                    <figure class="highcharts-figure">
-                        <div id="container"></div>
-                        <p class="highcharts-description">
-                            
-                        </p>
-                    </figure>
+            <div class="content_container">
+                <h1 class="top_content" id="dashboard">Dashboard(Group-Demo)</h1>
+                <div class="dashboard_content">
+                    <div class="select_date">
+                        <select>
+                            <option value="1">近30日</option>
+                            <option value="2">近7日</option>
+                            <option value="3">近1日</option>
+                        </select>
+                    </div>
+                    <div class="dash_chart">
+                        <h3>平臺登入人數</h3>
+                        <div class="row mb-5 p-2" id="chart">
+                        </div>
+                    </div>
+                    <div class="dash_chart">
+                        <h3>各模式問題量趨勢</h3>
+                        <div class="row mb-5 p-2" id="chart1">
+                        </div>
+                    </div>
+                    <div class="dash_chart">
+                        <h3>各機器人問題量</h3>
+                        <div class="row mb-5 p-2" id="chart2">
+                        </div>
+                    </div>
+                
+            </div >
+            <div class="content_container" >
+                <h1 class="top_content" id="robot_manager">機器人服務管理(Group-Demo)</h1>
+                <div class="robot_container">
+                    <div class="robot_sidebar">
+                        <button class="button add_button"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                        <ul>
+                            <li>統一設定</li>
+                            <li>通用型機器人模式</li>
+                            <li>摘要小幫手</li>
+                            <li>翻譯小幫手</li>
+                            <li>錯誤訊息小幫手</li>
+                            <li>教學小幫手</li>
+                            <li>校正小幫手</li>
+                            <li>標題產生小幫手</li>
+                            <li>大綱產生小幫手</li>
+                            <li>文章產生小幫手</li>
+                            <li>會議記錄小幫手</li>
+                            <li>社群貼文小幫手</li>
+                            <li>新聞稿小幫手</li>
+                            <li>虎航指南</li>
+                            <li>麒</li>
+                            <li>網服維修幫手</li>
+                            <li>證券小幫手</li>
+                            <li>智易</li>
+                            <li>統一證</li>
+                            <li>測試零壹</li>
+                        </ul>
+                    </div>
+                    <div class="robot_content">
+
+                    </div>
                 </div>
             </div>
-            <h1 class="top_content" id="robot_manager" >機器人服務管理(Group-Demo)</h1>
+            
             <h1 class="top_content" id="using_situation" >使用情況(Group-Demo)</h1>
             <h1 class="top_content" id="usage_estimate" >用量預估(Group-Demo)</h1>
     
