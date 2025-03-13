@@ -3047,3 +3047,6 @@ var options2 = {
 
 var chart = new ApexCharts(document.querySelector("#chart2"), options2);
     chart.render();
+
+
+console.log("shishikan")
