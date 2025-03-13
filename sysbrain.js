@@ -66,16 +66,7 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 
 
-// document.addEventListener("DOMContentLoaded",function(){
-//     const text = document.getElementById('text');
-//     const ass_list_overview = document.getElementById('ass_list_overview');
-//     const ass_overview_btn = document.getElementById('ass_overview_btn');
-//     ass_overview_btn.addEventListener("click",ass_overview_btn_fcn);
-//     function ass_overview_btn_fcn(){
-//         text.style.display = 'none';
-//         ass_list_overview.style.display = 'block';
-//     }
-// });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const pages = {
@@ -3039,4 +3030,3 @@ var chart = new ApexCharts(document.querySelector("#chart2"), options2);
     chart.render();
 
 
-console.log("shishikan")
