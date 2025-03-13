@@ -3,30 +3,34 @@ document.addEventListener("DOMContentLoaded",function(){
     const list = document.getElementById('list');
     const row_all = document.getElementById('row_all');
     const title_top = document.getElementById('title_top');
+    const text = document.getElementById('text');
+    const title = document.getElementById('title');
+    const group = document.getElementById('group');
+    const groupbtn = document.getElementById('groupbtn');
+    const spe = document.getElementById('spe');
+
     btn.addEventListener("click",modelbtn);
     function modelbtn() {
+        const btntext = btn.childNodes[0].nodeValue.trim();
         if(list.style.display === 'block'){
             list.style.display = 'none';
             row_all.style.display = 'block';
-            title_top.style.background = '';
+            title_top.style.background = 'black';
         }
         else{
             list.style.display = 'block';
             row_all.style.display = 'none';
             title_top.style.background = 'gray';
+            ass_list.style.display = 'none';
         }
     };
-});
 
-document.addEventListener("DOMContentLoaded",function(){
-    const text = document.getElementById('text');
-    const title = document.getElementById('title');
-    const group = document.getElementById('group');
-    const groupbtn = document.getElementById('groupbtn');
     groupbtn.addEventListener("click",groupbtnfcn);
+    spe.addEventListener("click",groupbtnfcn);
+
     function groupbtnfcn(){
         const groupDisplay = window.getComputedStyle(group).display;
-        if(groupDisplay === "block" || groupDisplay === "flex"){
+        if(groupDisplay ==='block' || groupDisplay === 'flex'){
             text.style.display ='block';
             title.style.display ='flex';
             group.style.display ='none';
@@ -38,7 +42,40 @@ document.addEventListener("DOMContentLoaded",function(){
             group.style.width ='100vw';
         }
     };
+
+    const General_Robot_Mode = document.getElementById('General Robot Mode');
+    General_Robot_Mode.addEventListener("click",General_Robot_Mode_btn);
+    function General_Robot_Mode_btn(){
+        btn.childNodes[0].nodeValue = '通用型機器人模式 ';
+        location.reload();
+    };
+
+    const ass_robot = document.getElementById('ass_robot');
+    const ass_list = document.getElementById('ass_list');
+    const ass_list_overview = document.getElementById('ass_list_overview');
+    ass_robot.addEventListener("click",ass_robot_btn);
+    function ass_robot_btn(){
+        btn.childNodes[0].nodeValue = '小幫手模式';
+        list.style.display = 'none';
+        title_top.style.background ='black'; 
+        ass_list.style.display = 'block';
+        ass_list_overview.style.display = 'block';
+        ass_list_overview.style.marginLeft = '20%'; 
+        text.style.display = 'none';
+    }; 
 });
+
+
+// document.addEventListener("DOMContentLoaded",function(){
+//     const text = document.getElementById('text');
+//     const ass_list_overview = document.getElementById('ass_list_overview');
+//     const ass_overview_btn = document.getElementById('ass_overview_btn');
+//     ass_overview_btn.addEventListener("click",ass_overview_btn_fcn);
+//     function ass_overview_btn_fcn(){
+//         text.style.display = 'none';
+//         ass_list_overview.style.display = 'block';
+//     }
+// });
 
 document.addEventListener("DOMContentLoaded", function() {
     const pages = {
@@ -104,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (icon_gear) {
         icon_gear.addEventListener('click', () => {
             console.log("點擊了 齒輪，恢復側邊欄");
-    
             side_first_ul.style.display = "flex";
             sidebar_set.style.justifyContent = "space-between";
             icon_gear.style.display = "none";
@@ -120,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    
+
 });
 
 
