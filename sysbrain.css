@@ -485,7 +485,7 @@ i{
     width: 100%;
 }
 
-ul li{
+.robot_ul li{
     list-style: none;
     padding: 16px 0;
     text-align: center;
@@ -494,7 +494,7 @@ ul li{
     text-overflow: ellipsis;
 }
 
-ul{
+.robot_ul{
     padding: 0%;
 }
 
