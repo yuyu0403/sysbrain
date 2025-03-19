@@ -45,6 +45,18 @@ body{
 .ass_list i{
     margin-right: 6%;
 }
+.limit_list{
+    list-style-type: none;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding-left: 10%;
+    margin-top: 7%;
+    line-height: 2.2;
+    display: none;
+}
+.limit_list i {
+    margin-right: 6%;
+}
 .list{
     list-style-type: none;
     display: none;
@@ -527,4 +539,8 @@ i{
 .ass_list_overview{
     display: none;
     margin-left: 20%; 
+}
+.limit_list_text1{
+    display: none;
+    margin-left: 20%;
 }

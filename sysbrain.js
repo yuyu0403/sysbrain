@@ -1,17 +1,23 @@
-document.addEventListener("DOMContentLoaded",function(){
-    const btn = document.getElementById('btn');
-    const list = document.getElementById('list');
-    const row_all = document.getElementById('row_all');
-    const title_top = document.getElementById('title_top');
-    const text = document.getElementById('text');
-    const title = document.getElementById('title');
-    const group = document.getElementById('group');
-    const groupbtn = document.getElementById('groupbtn');
-    const spe = document.getElementById('spe');
+const btn = document.getElementById('btn');
+const limit_robot = document.getElementById('limit_robot');
+const limit_list = document.getElementById('limit_list');
+const limit_list_text1 = document.getElementById('limit_list_text1');
+const list = document.getElementById('list');
+const row_all = document.getElementById('row_all');
+const title_top = document.getElementById('title_top');
+const ass_list_overview = document.getElementById('ass_list_overview');
+const ass_list = document.getElementById('ass_list');
+const text = document.getElementById('text');
+const title = document.getElementById('title');
+const group = document.getElementById('group');
+const groupbtn = document.getElementById('groupbtn');
+const spe = document.getElementById('spe');
+const ass_robot = document.getElementById('ass_robot');
 
+document.addEventListener("DOMContentLoaded",function(){
+    
     btn.addEventListener("click",modelbtn);
     function modelbtn() {
-        const btntext = btn.childNodes[0].nodeValue.trim();
         if(list.style.display === 'block'){
             list.style.display = 'none';
             row_all.style.display = 'block';
@@ -24,7 +30,9 @@ document.addEventListener("DOMContentLoaded",function(){
             ass_list.style.display = 'none';
         }
     };
+});
 
+document.addEventListener("DOMContentLoaded",function(){
     groupbtn.addEventListener("click",groupbtnfcn);
     spe.addEventListener("click",groupbtnfcn);
 
@@ -42,17 +50,21 @@ document.addEventListener("DOMContentLoaded",function(){
             group.style.width ='100vw';
         }
     };
-
+});
+   
+document.addEventListener("DOMContentLoaded",function(){
     const General_Robot_Mode = document.getElementById('General Robot Mode');
     General_Robot_Mode.addEventListener("click",General_Robot_Mode_btn);
     function General_Robot_Mode_btn(){
         btn.childNodes[0].nodeValue = '通用型機器人模式 ';
-        location.reload();
+        const btntext = btn.childNodes[0].nodeValue.trim();
+        if(btntext === '通用型機器人模式'){
+            location.reload();
+        }
     };
-
-    const ass_robot = document.getElementById('ass_robot');
-    const ass_list = document.getElementById('ass_list');
-    const ass_list_overview = document.getElementById('ass_list_overview');
+});
+    
+document.addEventListener("DOMContentLoaded",function(){
     ass_robot.addEventListener("click",ass_robot_btn);
     function ass_robot_btn(){
         btn.childNodes[0].nodeValue = '小幫手模式';
@@ -62,9 +74,48 @@ document.addEventListener("DOMContentLoaded",function(){
         ass_list_overview.style.display = 'block';
         ass_list_overview.style.marginLeft = '20%'; 
         text.style.display = 'none';
-    }; 
+        if(btn.childNodes[0].nodeValue ==='小幫手模式'){
+            btn.addEventListener("click",function(){
+                if(list.style.display === 'block'){
+                    ass_list.style.display = 'none';
+                }
+                else{
+                    ass_list.style.display = 'block';
+                    row_all.style.display = 'none';
+                    limit_list.style.display = 'none';
+                    limit_list_text1.style.display = 'none';
+                }
+            });
+        }
+    };
 });
-
+   
+document.addEventListener("DOMContentLoaded",function(){
+   
+    limit_robot.addEventListener("click",limit_robot_btn);
+    function limit_robot_btn(){
+        btn.childNodes[0].nodeValue = '限定知識機器人';
+        list.style.display = 'none';
+        limit_list.style.display = 'block';
+        limit_list_text1.style.display = 'block';
+        limit_list_text1.style.marginLeft = '20%';
+        title_top.style.background = 'black';
+        ass_list_overview.style.display = 'none';
+        if(btn.childNodes[0].nodeValue ==='限定知識機器人'){
+            btn.addEventListener("click",function(){
+                if(list.style.display === 'block'){
+                    limit_list.style.display = 'none';
+                }
+                else{
+                    limit_list.style.display = 'block';
+                    row_all.style.display = 'none';
+                    ass_list.style.display = 'none';
+                    limit_list_text1.style.display = 'block';
+                }
+            });
+        }
+    }
+});   
 
 
 
