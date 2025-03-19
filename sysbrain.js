@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // 使用 fetch 載入 JSON 資料
-fetch('/data.json')
+fetch('/sysbrain/data.json')
     .then(response => response.json())  // 將回應轉換為 JSON 格式
     .then(data => {
         // 遍歷 data 中的每個圖表配置
