@@ -213,23 +213,23 @@
                     </div>
                     <div class="dash_chart">
                         <h3>平臺登入人數</h3>
-                        <div class="row mb-5 p-2" id="chart">
+                        <div class="row mb-5 p-2" id="chart1-container">
                         </div>
                     </div>
                     <div class="dash_chart">
                         <h3>各模式問題量趨勢</h3>
-                        <div class="row mb-5 p-2" id="chart1">
+                        <div class="row mb-5 p-2" id="chart2-container">
                         </div>
                     </div>
                     <div class="dash_chart">
                         <h3>各機器人問題量</h3>
-                        <div class="row mb-5 p-2" id="chart2">
+                        <div class="row mb-5 p-2" id="chart3-container">
                         </div>
                     </div>
                 
             </div >
             <div class="content_container" >
-                <h1 class="top_content" id="robot_manager">機器人服務管理(Group-Demo)</h1>
+                <h1 class="top_content" id="robot_manager">服務管理(Group-Demo)</h1>
                 <div class="robot_container">
                     <div class="robot_sidebar">
                         <button class="button add_button"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
@@ -257,14 +257,106 @@
                         </ul>
                     </div>
                     <div class="robot_content">
+                        <ul class="common_con_ul" id="common_con_ul">
+                            <li>違規禁用設定</li>
+                            <li>禁用詞設定</li>
+                            <li>LLM設定</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content_container">
+                <h1 class="top_content" id="using_situation" >使用情況(Group-Demo)</h1>
+                <div class="using_container">
+                    <ul class="px-2 mb-0 common_con_ul" id="common_con_ul2">
+                        <li>對話紀錄</li>
+                        <li>違規紀錄</li>
+                    </ul>
+                    <div class="clo-3 using_sidebar" id="using_sidebar">
+                        <div class="using_con">
+                            <i class="fa-solid fa-magnifying-glass mt-1 search_icon"></i>
+                            <input type="search" class="search" placeholder="請輸入關鍵字">
+                            <i class="fa-solid fa-filter mt-2 ps-1"></i>
+                            <i class="fa-solid fa-file-export mt-2 ps-1"></i>
+                        </div>
+                        <p>最近7天</p>
+                    </div>
+                    <div class="col-9 using_content">
 
                     </div>
                 </div>
             </div>
             
-            <h1 class="top_content" id="using_situation" >使用情況(Group-Demo)</h1>
-            <h1 class="top_content" id="usage_estimate" >用量預估(Group-Demo)</h1>
-    
+            <div class="content_container">
+                <h1 class="top_content" id="usage_estimate" >用量預估(Group-Demo)</h1>
+                <div class="usage_container m-2 p-2">
+                    <div class="usage_content">
+                        <h5>實際用量</h5>
+                        <div>
+                            <div>
+                                <h5>實際累積用量：347，744 token</h5>
+                                <h5>群組Token上限：500，000，000 token</h5>
+                                <p>本期計算區間： 2025/03/01 ~ 2025/03/19</p>
+                            </div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <h6>機器人：</h6>
+                                        <select>
+                                            <option>全部</option>
+                                            <option>wasda</option>
+                                            <option>中華郵政</option>
+                                            <option>DaiwaHouse</option>
+                                            <option>新聞稿小幫手</option>
+                                            <option>資服</option>
+                                            <option>大綱產生小幫手</option>
+                                            <option>文章產生小幫手</option>
+                                            <option>會議記錄小幫手</option>
+                                            <option>校正小幫手</option>
+                                            <option>標題產生小幫手</option>
+                                            <option>社群貼文小幫手</option>
+                                            <option>翻譯小幫手</option>
+                                            <option>通用型機器人模式</option>
+                                            <option>教學小幫手</option>
+                                            <option>虎航指南</option>
+                                            <option>錯誤訊息小幫手</option>
+                                            <option>統一證</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <h6>模型：</h6>
+                                        <select>
+                                            <option>全部</option>
+                                            <option> gpt-4o-mini-2024-07-18 </option>
+                                            <option> text-embedding-ada-002 </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h6>區間：</h6>
+                                        <select>
+                                            <option> 本年 </option>
+                                            <option> 本月 </option>
+                                            <option> 本周 </option>
+                                            <option> 本日 </option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <h6>輸入/出：</h6>
+                                        <select>
+                                            <option> 輸入 </option>
+                                            <option> 輸出 </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="server_manage" id="server_manage">
                 <h1 class="top_content" id="server_manage_top">系統管理</h1>
                 <div class="ser_manage_h5">

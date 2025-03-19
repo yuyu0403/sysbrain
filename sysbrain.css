@@ -426,10 +426,11 @@ i{
 .top_content{
     border-bottom: 1px solid black;
     width: 100%;
-    padding: 10px;
+    padding: 7px 15px 15px;
     letter-spacing: 8px;
     font-weight: 700;
     margin: 0;
+    letter-spacing: 12px;
 }
 
 .dashboard_content{
@@ -470,34 +471,6 @@ i{
     margin: 20px 0;
 }
 
-.robot_sidebar{
-    width: 150px;
-    border-right: 1px solid black;
-    padding: 16px 12px;
-    overflow-y: scroll;
-}
-
-.add_button{
-    background-color: rgb(24, 92, 193);
-    height: 32px;
-    border: none;
-    border-radius: 25px;
-    width: 100%;
-}
-
-.robot_ul li{
-    list-style: none;
-    padding: 16px 0;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.robot_ul{
-    padding: 0%;
-}
-
 .highcharts-data-table th {
     font-weight: 600;
     padding: 0.5em;
@@ -528,3 +501,84 @@ i{
     display: none;
     margin-left: 20%; 
 }
+
+.robot_container{
+    display: none;
+}
+
+.robot_sidebar{
+    width: 150px;
+    border-right: 1px solid black;
+    padding: 16px 12px;
+    overflow-y: scroll;
+}
+
+.add_button{
+    background-color: rgb(24, 92, 193);
+    height: 32px;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.robot_ul li{
+    list-style: none;
+    padding: 16px 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.robot_ul{
+    padding: 0%;
+}
+
+
+.robot_content{
+    width: calc(100% - 150px);
+}
+
+.common_con_ul{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.using_sidebar{
+    width: 350px;
+    border-right: 1px solid black;
+    padding:12px;
+    height: 100%;
+}
+
+.common_con_ul li{
+    margin: 12px;
+    margin-right: 48px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    list-style: none;
+}
+
+.using_container{
+    display: none;
+    height: 84.2vh;
+}
+
+.using_con{
+    width: 100%;
+}
+
+.search{
+    border: none;
+    background-color: #f4fafc;
+    width: 100%;
+    padding-left: 8%;
+    height: 34px;
+}
+
+
+.search_icon{
+    position: absolute;
+    padding: 5px;
+}
+
