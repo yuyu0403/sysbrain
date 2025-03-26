@@ -337,7 +337,12 @@ hr.line2{
 /* .title{
     display: none;
 }*/
-
+.limit_list_text1{
+    display: none;
+}
+.ass_list_overview{
+    display: none;
+}
 .group{
     display: none;
 }

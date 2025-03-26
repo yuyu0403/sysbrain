@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded",function(){
 });
    
 document.addEventListener("DOMContentLoaded",function(){
-    const General_Robot_Mode = document.getElementById('General Robot Mode');
+    const General_Robot_Mode = document.getElementById('General_Robot_Mode');
     General_Robot_Mode.addEventListener("click",General_Robot_Mode_btn);
     function General_Robot_Mode_btn(){
         btn.childNodes[0].nodeValue = '通用型機器人模式 ';
@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded",function(){
         ass_list_overview.style.display = 'block';
         ass_list_overview.style.marginLeft = '20%'; 
         text.style.display = 'none';
+        limit_list_text1.style.display = 'none';
         if(btn.childNodes[0].nodeValue ==='小幫手模式'){
             btn.addEventListener("click",function(){
                 if(list.style.display === 'block'){
@@ -83,11 +84,10 @@ document.addEventListener("DOMContentLoaded",function(){
                     ass_list.style.display = 'block';
                     row_all.style.display = 'none';
                     limit_list.style.display = 'none';
-                    limit_list_text1.style.display = 'none';
                 }
             });
         }
-    };
+    }; 
 });
    
 document.addEventListener("DOMContentLoaded",function(){
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // 使用 fetch 載入 JSON 資料
-fetch('/sysbrain/data.json')
+fetch('data.json')
     .then(response => response.json())  // 將回應轉換為 JSON 格式
     .then(data => {
         // 遍歷 data 中的每個圖表配置
